@@ -1,5 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        // Specify the user that has the necessary permissions
+        node {
+            label 'my-label'
+            customWorkspace '/var/lib/jenkins/workspace/nginx-pipeline'
+        }
+    }
     stages {
         stage('Clone Repository') {
             steps {
@@ -13,8 +19,8 @@ pipeline {
         }
         stage('Deploy Nginx') {
             steps {
-                sh 'sudo cp index.html /var/www/html/index.html' // Copy index.html to Nginx directory
-                sh 'sudo systemctl restart nginx' // Restart Nginx
+                sh 'cp index.html /var/www/html/index.html' // Copy index.html to Nginx directory
+                sh 'systemctl restart nginx' // Restart Nginx
             }
         }
     }
