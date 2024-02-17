@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'git@palogitlab.palobd.com:rafiq/nginx-pipeline.git'
+                git
             }
         }
         stage('Build') {
