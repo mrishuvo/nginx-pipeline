@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git
+                git 'https://github.com/mrishuvo/nginx-pipeline.git'
             }
         }
         stage('Build') {
