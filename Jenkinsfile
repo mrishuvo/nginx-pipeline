@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building the project...' // Dummy build step
+                // Your build commands, if any
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying the project...' // Dummy deployment step
+                // Your deployment steps
             }
         }
     }
