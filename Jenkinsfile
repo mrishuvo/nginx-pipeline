@@ -8,13 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                // Your build commands, if any
+                echo 'Building the project...' // Dummy build step
             }
         }
         stage('Deploy') {
             steps {
-                sh 'cp index.html /var/www/html/index.html' // Copy index.html to Nginx directory
-                sh 'systemctl restart nginx' // Restart Nginx
+                echo 'Deploying the project...' // Dummy deployment step
             }
         }
     }
