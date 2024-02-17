@@ -1,11 +1,5 @@
 pipeline {
-    agent {
-        // Specify the user that has the necessary permissions
-        node {
-            label 'my-label'
-            customWorkspace '/var/lib/jenkins/workspace/nginx-pipeline'
-        }
-    }
+    agent any
     stages {
         stage('Clone Repository') {
             steps {
