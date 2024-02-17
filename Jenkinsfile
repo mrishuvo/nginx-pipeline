@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/mrishuvo/nginx-pipeline.git'
+                echo 'Cloning repository...' // Placeholder step, replace with actual Git clone step
             }
         }
         stage('Build') {
             steps {
-                // Your build commands, if any
+                echo 'Building project...' // Placeholder step, replace with actual build commands
             }
         }
         stage('Deploy') {
             steps {
-                // Your deployment steps
+                echo 'Deploying project...' // Placeholder step, replace with actual deployment commands
             }
         }
     }
