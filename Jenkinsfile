@@ -14,7 +14,6 @@ pipeline {
         stage('Deploy Nginx') {
             steps {
                 sh 'cp index.html /var/www/html/index.html' // Copy index.html to Nginx directory
-                sh 'systemctl restart nginx' // Restart Nginx
             }
         }
     }
